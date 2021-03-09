@@ -1,0 +1,2 @@
+https://qiita.com/CyberMergina/items/f889519e6be19c46f5f4
+上記アドレスを参考にしてDB設計を行うこと。
