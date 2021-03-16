@@ -1,0 +1,28 @@
+// Userを作成する。
+create user `ababa`@`localhost` IDENTIFIED BY 'abaPass';
+
+// 権限付与(全部の権限を付与)
+grant all privileges on test_db.* to `ababa`@`localhost`;
+
+
+// db作成
+create database test_db;
+
+// db確認
+ show databases;
+
+ // 使用DB決定
+ use test_db;
+
+// 適当なテーブルを作る
+CREATE TABLE `m_users` (
+          `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+          `user_name` VARCHAR(100) NOT NULL COMMENT "ユーザー名",
+          `mail_address` VARCHAR(200) NOT NULL COMMENT "メールアドレス",
+          `password` VARCHAR(100) NOT NULL COMMENT "パスワード",
+          `created` datetime DEFAULT NULL COMMENT "登録日",
+          `modified` datetime DEFAULT NULL COMMENT "更新日"
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+// テーブル確認
+desc　m_users ;
