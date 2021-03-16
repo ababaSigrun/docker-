@@ -7,3 +7,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: my-secret-pw「
+      
+    volumes:
+      - dbvolume/data:/var/lib/mysql          # ← 問題の箇所
+
+volumes:                                      # ← Volumesでデータ領域をコンテナとして定義
+  dbvolume:
